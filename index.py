@@ -1,12 +1,5 @@
-import json
-import datetime
-
-
-def handler(event, context):
-    data = {
-        'output': 'Hello World',
-        'timestamp': datetime.datetime.utcnow().isoformat()
-    }
-    return {'statusCode': 200,
-            'body': json.dumps(data),
-            'headers': {'Content-Type': 'application/json'}}
+import numpy as np
+import pandas as pd
+from keras.utils import np_utils
+from keras.layers import Dense, Activation, Dropout
+from keras.models import Sequential
